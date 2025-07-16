@@ -4,12 +4,28 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   
   // Image optimization
-  images: {
-     
-    domains: [
-      'images.unsplash.com',
-      'localhost',
-      'randomuser.me'
+  
+   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i0.wp.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+         {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+        port: '',
+        pathname: '/**',
+      },
+      // You can add more domains here as needed
     ],
   },
 
